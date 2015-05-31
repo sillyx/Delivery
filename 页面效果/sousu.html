@@ -1,10 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Search result</title>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/pag.css"/>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="g_page.js" type="text/javascript"></script>
 
 <!--<script type="text/javascript">
 function rbreset(){
@@ -244,10 +246,12 @@ function rbreset(){
     </div>
   </div>
   <div class="pag">
-    <div class="manu"><a href="#">Home</a><span class="current">1</span><a href="#">2</a><a href="#">3</a>...<a href="#">9</a><a href="#">10</a><a href="#">Next </a> <a href="#"> back</a></div>
+    <div class="manu">
+    <!--<a href="#">Home</a><span class="current">1</span><a href="#">2</a><a href="#">3</a>...<a href="#">9</a><a href="#">10</a><a href="#">Next </a> <a href="#"> back</a>-->
+    </div>
   </div>
 </div>
-<div class="footer" >
+<div class="footer">
   <hr  style=" color:#eee; width:99%;border:#eee 0px solid; border-top:#eee 1px solid;  background:#eee;"/>
   <br />
   <div> <img src="images/shouye_s.png" width="335" height="62" /></div>
@@ -262,3 +266,11 @@ function rbreset(){
 </div>
 </body>
 </html>
+<script type="text/javascript">
+    function callBack(p) {
+        alert(p); 
+    }
+    $(function () {
+        pagination.init(200, callBack);
+    })
+</script>
