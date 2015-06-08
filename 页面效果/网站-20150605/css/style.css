@@ -257,12 +257,13 @@ address_bomb_bottom a img{ height:34px; line-height:50px; vertical-align:middle;
 .account_bomb_title{ height:45px; line-height:45px;}
 .account_bomb_title_left{ float:left; color:#ff2d4b; font-size:16px; padding-left:15px;}
 .account_bomb_title_right{ float:right; padding-right:15px;}
-.accountr_bomb_bottom{ width:560px;}
-.account_bomb_bottom_left{  color:#333333; padding-left:10px;  line-height:50px; width:120px;  }
+.account_bomb_bottom{ width:560px;}
+.account_bomb_bottom_left{  color:#333333; line-height:50px; width:150px; text-align:right;   }
 .account_bomb_bottom_right{ text-align:left;  color:#999999; line-height:50px; padding-left:10px; padding-right:10px;}
 .account_bomb_bottom_botton{ width:80px;}
-.account_bomb_red{ color:#fe3957;}
-
+.account_bomb_select{  width:300px; height:30px; line-height:30px;  font-size:14px; color:#999999; padding-left:10px; padding-right:10px;}
+.account_bomb_select option{  height:30px; line-height:30px;  font-size:14px; }
+.account_bomb_red{color:#fe3957; font-weight:bold;}
 .account_bomb_bottom a { height:50px; line-height:50px;}
 .account_bomb_bottom a img{  line-height:50px; vertical-align:middle; padding:15px;}
 
