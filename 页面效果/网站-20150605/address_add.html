@@ -1,10 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>address_add</title>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/pag.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
 </head>
 
 <body>
@@ -57,14 +58,14 @@
             Sydney shandong LiangFu group pharmaceutical co.,<br />
             LTDSydney shandong LiangFu group </div>
         </div>
-        <div class=" address_right_bottom_right"> <img src="images/address_10.png" width="28" height="19" />new delivery address </div>
+        <div onclick="showDia('addressDia');" class=" address_right_bottom_right"> <img src="images/address_10.png" width="28" height="19" />new delivery address </div>
    
     </div>
   </div>
   
 </div>
 
-     <div class="address_bomb">
+     <div class="address_bomb" style="display:none;" id="addressDia">
           <div class="address_bomb_title"> <span class="address_bomb_title_left">New address</span> <span class="address_bomb_title_right"><a href=""><img src="images/address_04.png" width="13" height="45" /></a></span> </div>
           <hr  style=" color:#eee; width:550px ;border:#eee 0px solid; border-top:#ebebeb 1px solid;  height:1px;"/>
           <table class=" address_bomb_bottom">
@@ -108,3 +109,14 @@
 </div>
 </body>
 </html>
+<script type="text/javascript">
+
+    $(function () {
+
+    })
+
+    function showDia(id) {
+        var elementId = '#' + id;
+        $(elementId).fadeIn();
+    }
+</script>
