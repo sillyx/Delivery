@@ -1,8 +1,9 @@
-﻿var pagination = {
+var pagination = {
     pagerBar: '.pag>div',
     pageContent: '',
     //开始出现省略号的标志位,推荐使用奇数
-    flagIndex: 6,
+    flagIndex: 5,
+    flagIndex2: 8,
     callBack: {},
     sum: 0,
     //初始化分页插件
@@ -32,7 +33,7 @@
         }
         else {
             for (var i = 2; i <= sum; i++) {
-                content += '<a href="javascript:;">' + i + '</a>';
+                content += '<a href="javascript:go(' + i + ');">' + i + '</a>';
             }
         }
         content += '<a href="javascript:go();">Next </a> <a href="javascript:go(' + sum + ');"> Back</a>';
@@ -44,8 +45,8 @@
         var index = parseInt(pagination.flagIndex / 2);
         if (p && p > 0) {
             var content = '<a href="javascript:go(' + 1 + ');">Home</a><a href="javascript:go(-1);">Prev</a>';
-            if (pagination.sum < pagination.flagIndex + 1) {
-                for (var i = 1; i <= sum; i++) {
+            if (pagination.sum < pagination.flagIndex2) {
+                for (var i = 1; i <= pagination.sum; i++) {
                     if (i == p) {
                         content += '<span class="current">' + i + '</span>';
                     }
@@ -55,7 +56,7 @@
                 }
             }
             else {
-                if (p <= pagination.flagIndex) {
+                if (p <= pagination.flagIndex) { 
                     for (var i = 1; i <= pagination.flagIndex + 1; i++) {
                         if (i == p) {
                             content += '<span class="current">' + i + '</span>';
@@ -67,7 +68,7 @@
                     content += '...<a href="javascript:go(' + pagination.sum + ');">' + pagination.sum + '</a>';
                 }
                 else {
-                    content += '<a href="javascript:go(' + 1 + ');">' + 1 + '</a>...';
+                    content += '<a href="javascript:go(' + 1 + ');">' + 1 + '</a>...'; 
                     if (pagination.sum >= p + pagination.flagIndex + 1) {
                         for (var i = p - index; i <= p + index; i++) {
                             if (i == p) {
@@ -81,7 +82,7 @@
                     }
                     else {
                         if (pagination.sum >= p + index + 2) {
-                            for (var i = p - index; i <= p + index; i++) { 
+                            for (var i = p - index; i <= p + index; i++) {
                                 if (i == p)
                                     content += '<span class="current">' + p + '</span>';
                                 else
